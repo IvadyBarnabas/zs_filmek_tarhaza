@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fejléc */
+header {
+    background-color: #1f1f1f;
+    padding: 1rem;
+    border-bottom: 2px solid #ff3c00;
+}
+a{
+    text-decoration: none;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header-container h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #ff3c00;
+    text-shadow: 0 0 5px #ff3c00aa;
+    transition: transform 0.3s;
+}
+
+.header-container h1:hover {
+    transform: scale(1.05);
+}
+
+header nav {
+    margin-bottom: 1rem;
+}
+
+header nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #ccc;
+    font-weight: bold;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #ff3c00;
+}
+
+header img {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+/* Fő tartalom */
+main.main-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+main h2 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #ffae00;
+}
+
+/* Kereső */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#searchInput {
+    padding: 0.5rem;
+    width: 300px;
+    max-width: 80%;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-container button {
+    padding: 0.5rem 1rem;
+    background-color: #ff3c00;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #ff5722;
+}
+
+/* Anime blokk */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.movie-block {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.movie-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 60, 0, 0.3);
+}
+
+.movie-block img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ff3c00;
+}
+
+.movie-block h3 {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #ffae00;
+}
+
+/* Rólunk szakasz */
+.about-section {
+    background-color: #181818;
+    margin-top: 3rem;
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 5px solid #ff3c00;
+}
+
+.about-section h2 {
+    color: #ff3c00;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+/* Lábléc */
+footer {
+    background-color: #1f1f1f;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 2px solid #ff3c00;
+    color: #888;
+}
+
+/* Reszponzivitás */
+@media (max-width: 768px) {
+    header nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #searchInput, .search-container button {
+        width: 100%;
+        border-radius: 5px;
+        margin: 0.25rem 0;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filip ZS kategóriás filmmúzeum.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="kepek/ICON.PNG.png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html"><h1>ZS Kategóriás filmek tárháza</h1></a>
+            <nav>
+                <a href="index.html">Főoldal</a>
+                <a href="#movie">Filmek</a>
+                <a href="#about">Rólunk</a>
+                <a href="#contact">Kapcsolat</a>
+            </nav>
+            <img src="kepek/kezdolapheader.png" alt="header">
+        </div>
+    </header>
+
+    <main id="anime" class="main-content">
+        <h1>Üdvözlünk Filip ZS kategóriás filmmúzeumában!</h1>
+        <h2>Válaszd ki a LEGJOBBAN kívánt filmet!</h2>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Keresés animére...">
+            <button onclick="searchAnime()">🔍</button>
+        </div>
+        <div class="movie-grid">
+            <div class="movie-block">
+                <a href="spawn.html">
+                    <img src="kepek/spawnposter.png" alt="Spawn">
+                    <h3>Spawn: Az Ivadék</h3>
+                </a>
+            </div>
+
+            <div class="movie-block">
+                <a href="micimackoveresmez.html">
+                    <img src="kepek/micimackóvérésmézposter.png" alt="micimackóvérésmézposter">
+                    <h3>Micimackó Vér És Méz</h3>
+                </a>
+            </div>
+
+            <div class="movie-block">
+                <a href="micimackoveresmez2.html">
+                    <img src="kepek/micimackóvérésmézposter2.png" alt="micimackóvérésmézposter2">
+                    <h3>Micimackó Vér És Méz 2</h3>
+                </a>
+            </div>
+
+            <div class="movie-block">
+                <a href="Thepredator2018.html">
+                    <img src="kepek/predator2018poster.png" alt="predator2018poster">
+                    <h3>Predator: A Ragadozó</h3>
+                </a>
+            </div>
+        <div id="about" class="about-section">
+            <h2>Rólunk</h2>
+            <p>Filip ZS kategóriás filmmúzeuma egy hely, ahol a legjobb ZS kategóriás filmeket találod. Célunk, hogy bemutassuk ezeket a különleges alkotásokat, amelyek bár nem mindig kapnak nagy figyelmet, de mégis szórakoztatóak és emlékezetesek.</p>
+        
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>Filip ZS kategóriás filmmúzeuma - Minden jog fenntartva</p>
+    </footer>
+<script>
+function searchAnime() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const animeBlocks = document.querySelectorAll(".movie-block");
+
+    movieBlocks.forEach(block => {
+        const title = block.querySelector("h3").innerText.toLowerCase();
+        block.style.display = title.includes(input) ? "block" : "none";
+    });
+}
+</script>
+</body>
+</html>
