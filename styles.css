@@ -5,30 +5,58 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
-    color: #f0f0f0;
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
-/* Fejléc */
+
 header {
-    background-color: #1f1f1f;
-    padding: 1rem;
+    background-color: #3333335b;
+    position: relative;
+    width: 100%;
+    height: 200px;                
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     border-bottom: 2px solid #ff3c00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
 }
+
+
+header img {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;            
+    z-index: -1;              
+}
+
+header h1 {
+    font-size: 65px;
+    position: relative;
+    z-index: 1;                   
+    color: white;
+    text-align: center;
+}
+
 a{
     text-decoration: none;
 }
 
 .header-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-items: start;
     align-items: center;
-    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
 }
 
 .header-container h1 {
@@ -119,7 +147,6 @@ main h2 {
     background-color: #ff5722;
 }
 
-/* Anime blokk */
 .movie-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
