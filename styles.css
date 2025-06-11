@@ -16,16 +16,27 @@ body {
 
 
 header {
-    background-color: #3333335b;
     position: relative;
+    background-image: url('kepek/header2.png');
+    background-size: cover;
+    background-position: center;
     width: 100%;
-    height: 200px;                
+    height: 250px;                
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     border-bottom: 2px solid #ff3c00;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
 }
 
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* ez az átlátszó fekete */
+    z-index: 1;
+}
 
 header img {
 
@@ -62,9 +73,10 @@ a{
 .header-container h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    color: #ff3c00;
-    text-shadow: 0 0 5px #ff3c00aa;
+    color: #ffae00;
+    text-shadow: 0 0 5px #b67c00;
     transition: transform 0.3s;
+    z-index: 2;
 }
 
 .header-container h1:hover {
@@ -73,19 +85,25 @@ a{
 
 header nav {
     margin-bottom: 1rem;
+    z-index: 2;
 }
 
 header nav a {
-    margin: 0 1rem;
+    color: #fff;
     text-decoration: none;
-    color: #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 25px;
+    transition: background-color 0.5s ease;
     font-weight: bold;
-    transition: color 0.3s;
-    text-decoration: none;
 }
 
 header nav a:hover {
     color: #ff3c00;
+    background-color: #ffae00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 header img {
