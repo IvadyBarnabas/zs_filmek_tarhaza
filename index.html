@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filip ZS kategóriás filmmúzeum</title>
-    <link rel="icon" href="kepek/icon.png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="script" href="java.js">
 </head>
 <body>
 
@@ -17,149 +15,114 @@
             <a href="index.html">Főoldal</a>
             <a href="#movie">Filmek</a>
             <a href="#about">Rólunk</a>
-            <a href="#contact">Kapcsolat</a>
         </nav>
-        <div class="overlay"></div>
     </div>
 </header>
 
 <main>
-    <h1>Üdvözlünk Filip ZS kategóriás filmmúzeumában!</h1>
-    <h2>Válaszd ki a "LEGJOBBAN" kívánt filmet!</h2>
-
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Keresés filmre...">
-        <button onclick="searchMovie()">🔍</button>
-    </div>
+    <h1>Üdvözlünk!</h1>
+    <h2>Válassz filmet 👇</h2>
 
     <div class="movie-grid">
-        <div class="movie-block" onclick="openModal('spawn')">
-            <img src="kepek/spawnposter.png" alt="Spawn">
+
+        <div class="movie-block" onclick="goToMovie('spawn')">
+            <img src="kepek/spawnposter.png">
+            <div class="movie-info">
+                <p>Akció • 1997</p>
+                <button>▶ Lejátszás</button>
+            </div>
             <h3>Spawn: Az Ivadék</h3>
         </div>
-        <div class="movie-block" onclick="openModal('micimacko')">
-            <img src="kepek/micimackóvérésmézposter.png" alt="Micimackó: Vér és Méz">
-            <h3>Micimackó: Vér és Méz</h3>
+
+        <div class="movie-block" onclick="goToMovie('powerrangers')">
+            <img src="kepek/powerrangersposter.png">
+            <div class="movie-info">
+                <p>Akció • 2017</p>
+                <button>▶ Lejátszás</button>
+            </div>
+            <h3>Power Rangers</h3>
         </div>
-        <div class="movie-block" onclick="openModal('micimacko2')">
-            <img src="kepek/micimackóvérésmézposter2.png" alt="Micimackó: Vér és Méz">
-            <h3>Micimackó: Vér és Méz 2</h3>
+
+        <div class="movie-block" onclick="goToMovie('pacificrim2')">
+            <img src="kepek/pacificrim2.webp">
+            <div class="movie-info">
+                <p>Akció • 2018</p>
+                <button>▶ Lejátszás</button>
+            </div>
+            <h3>Pacific Rim 2: Lázadás</h3>
         </div>
-        <div class="movie-block" onclick="openModal('hearteyes')">
-            <img src="kepek/hearteyes.webp" alt="hearteyes">
-            <h3>Heart Eyes</h3>
-        </div>
-        <div class="movie-block" onclick="openModal('powerrangers')">
-            <img src="kepek/powerrangersposter.png" alt="Power Rangers">
-            <h3>Power Rangers (2017)</h3>
-        </div>
-        <div class="movie-block" onclick="openModal('predator2018')">
-            <img src="kepek/predator2018poster.png" alt="Predator">
+
+        <div class="movie-block" onclick="goToMovie('predator2018')">
+            <img src="kepek/predator2018poster.png">
+            <div class="movie-info">
+                <p>Horror • 2018</p>
+                <button>▶ Lejátszás</button>
+            </div>
             <h3>Predator: A Ragadozó</h3>
         </div>
-        <div class="movie-block" onclick="openModal('transformers5')">
-            <img src="kepek/transformers5.webp" alt="Transformers 5">
+
+        <div class="movie-block" onclick="goToMovie('avp2')">
+            <img src="kepek/avp2poster.png">
+            <div class="movie-info">
+                <p>Horror • 2007</p>
+                <button>▶ Lejátszás</button>
+            </div>
+            <h3>Alien vs. Predator 2: Requiem</h3>
+        </div>
+        <div class="movie-block" onclick="goToMovie('micimackóvérésméz')">
+            <img src="kepek/micimackóvérésmézposter.png">
+            <div class="movie-info">
+                <p>Horror • 2023</p>
+                <button>▶ Lejátszás</button>
+            </div>
+            <h3>Micimackó: Vér és Méz</h3>
+        </div>
+
+        <div class="movie-block" onclick="goToMovie('micimackóvérésméz2')">
+            <img src="kepek/micimackóvérésmézposter2.png">
+            <div class="movie-info">
+                <p>Horror • 2024</p>
+                <button>▶ Lejátszás</button>
+            </div>
+            <h3>Micimackó: Vér és Méz 2</h3>
+        </div> 
+
+        <div class="movie-block" onclick="goToMovie('transformers5')">
+            <img src="kepek/transformers5.webp">
+            <div class="movie-info">
+                <p>Akció • 2017</p>
+                <button>▶ Lejátszás</button>
+            </div>
             <h3>Transformers 5: Az Utolsó Lovag</h3>
         </div>
-        <div class="movie-block" onclick="openModal('tronares2')">
-            <img src="kepek/tronares.webp" alt="Tron Ares">
+
+        <div class="movie-block" onclick="goToMovie('tronares')">
+            <img src="kepek/tronares.webp">
+            <div class="movie-info">
+                <p>Akció • 2025</p>
+                <button>▶ Lejátszás</button>
+            </div>
             <h3>Tron: Ares</h3>
         </div>
-        <div class="movie-block" onclick="openModal('sharknado')">
-            <img src="kepek/sharknadoposter.png" alt="Sharknado">
+
+        <div class="movie-block" onclick="goToMovie('sharknado')">
+            <img src="kepek/sharknadoposter.png">
+            <div class="movie-info">
+                <p>Horror • 2013</p>
+                <button>▶ Lejátszás</button>
+            </div>
             <h3>Sharknado</h3>
         </div>
-        <div class="movie-block" onclick="openModal('madamweb')">
-            <img src="kepek/madamweb.webp" alt="Madam Web">
-            <h3>Madam Web</h3>
-        </div>
-        <div class="movie-block" onclick="openModal('amerikakapitány4')">
-            <img src="kepek/amerikakapitány4.png" alt="Amerika Kapitány 4">
-            <h3>Amerika Kapitány: Szép Új Világ</h3>
-        </div>
-        <div class="movie-block" onclick="openModal('pacificrim2')">
-            <img src="kepek/pacificrim2.webp" alt="Tűzgyűrű: Lázadás">
-            <h3>Tűzgyűrű: Lázadás</h3>
-        </div>
-        <div class="movie-block" onclick="openModal('avp2')">
-            <img src="kepek/avp2poster.png" alt="Alien VS Predator: Requiem">
-            <h3>Alien VS Predator: Requiem</h3>
-        </div>
-        <!-- További filmkártyák ugyanígy, csak onclickben a film ID -->
-    </div>
 
-    <div id="about" class="about-section">
-        <h2>Rólunk</h2>
-        <p>Filip ZS kategóriás filmmúzeuma egy hely, ahol a "LEGJOBB" ZS kategóriás filmeket találod. Célunk, hogy bemutassuk ezeket a különleges alkotásokat, amelyek bár nem mindig kapnak nagy figyelmet, de mégis szórakoztatóak és emlékezetesek.</p>    
     </div>
+    <footer>
+        <p>&copy; 2026 ZS Kategóriás filmmúzeum</p>
+    </footer>
 </main>
 
-<footer>
-    <p>Filip ZS kategóriás filmmúzeuma - Minden jog fenntartva</p>
-</footer>
-
-<!-- --- MODAL --- -->
-<div id="movieModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <iframe id="movieVideo" src="" allowfullscreen></iframe>
-        <h2 id="movieTitle"></h2>
-        <p id="movieDirector"></p>
-        <p id="movieActors"></p>
-        <p id="movieDescription"></p>
-    </div>
-</div>
-
 <script>
-const movies = {
-    spawn: {
-        title: "Spawn: Az Ivadék",
-        director: "Rendező: Mark A.Z. Dippé",
-        actors: "Szereplők: Michael Jai White, John Leguizamo, Martin Sheen",
-        description: "Spawn visszatér az élők világába, hogy harcoljon a gonosz ellen és megmentse szeretteit.",
-        video: "//videa.hu/player?v=yourSpawnVideoID"
-    },
-    powerrangers: {
-        title: "Power Rangers (2017)",
-        director: "Rendező: Dean Israelite",
-        actors: "Szereplők: Dacre Montgomery, Naomi Scott, RJ Cyler",
-        description: "Öt fiatal, akik különleges képességekkel rendelkeznek, összefognak, hogy megvédjék a Földet egy idegen fenyegetéstől.",
-        video: "//videa.hu/player?v=nldP9ljn5gHwYnlU"
-    },
-    predator2018: {
-        title: "Predator: A Ragadozó",
-        director: "Rendező: Shane Black",
-        actors: "Szereplők: Boyd Holbrook, Olivia Munn, Trevante Rhodes",
-        description: "A ragadozó visszatér, hogy új vadászra leljen a dzsungelben.",
-        video: "//videa.hu/player?v=yourPredatorVideoID"
-    }
-};
-
-function openModal(id) {
-    const movie = movies[id];
-    if(!movie) return;
-
-    document.getElementById("movieTitle").innerText = movie.title;
-    document.getElementById("movieDirector").innerText = movie.director;
-    document.getElementById("movieActors").innerText = movie.actors;
-    document.getElementById("movieDescription").innerText = movie.description;
-    document.getElementById("movieVideo").src = movie.video;
-
-    document.getElementById("movieModal").style.display = "block";
-}
-
-function closeModal() {
-    document.getElementById("movieModal").style.display = "none";
-    document.getElementById("movieVideo").src = ""; // Stop video lejátszás
-}
-
-function searchMovie() {
-    const input = document.getElementById("searchInput").value.toLowerCase();
-    const blocks = document.querySelectorAll(".movie-block");
-    blocks.forEach(block => {
-        const title = block.querySelector("h3").innerText.toLowerCase();
-        block.style.display = title.includes(input) ? "block" : "none";
-    });
+function goToMovie(id){
+    window.location.href = "filmek.html?film=" + id;
 }
 </script>
 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filip ZS kategóriás filmmúzeum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="index.html"><h1>ZS Kategóriás filmmúzeum</h1></a>
+        <nav>
+            <a href="index.html">Főoldal</a>
+            <a href="#movie">Filmek</a>
+            <a href="#about">Rólunk</a>
+        </nav>
+    </div>
+</header>
+
+<main class="player-page">
+
+    <iframe id="movieVideo" allowfullscreen></iframe>
+    <h2 id="movieTitle"></h2>
+    <p id="movieDirector"></p>
+    <p id="movieActors"></p>
+    <p id="movieDescription"></p>
+
+</main>
+
+<script>
+const movies = {
+    spawn: {
+        title: "Spawn: Az Ivadék",
+        director: "Rendező: Mark A.Z. Dippé",
+        actors: "Michael Jai White, John Leguizamo",
+        description: "Spawn visszatér az élők világába.",
+        video: "//videa.hu/player?v=14FBfKlEebBrUCBY"
+    },
+    powerrangers: {
+        title: "Power Rangers (2017)",
+        director: "Dean Israelite",
+        actors: "Dacre Montgomery",
+        description: "Fiatalok megmentik a világot.",
+        video: "//videa.hu/player?v=nldP9ljn5gHwYnlU"
+    },
+    predator2018: {
+        title: "Predator: A Ragadozó",
+        director: "Shane Black",
+        actors: "Boyd Holbrook",
+        description: "A ragadozó visszatér.",
+        video: "//videa.hu/player?v=yourPredatorVideoID"
+    },
+    pacificrim2: {
+        title: "Pacific Rim 2: Lázadás",
+        director: "Steven S. DeKnight",
+        actors: "John Boyega",
+        description: "Új generáció harcol a Kaijuk ellen.",
+        video: "//videa.hu/player?v=AKkfubCnN3fzP9H8" 
+    }
+};
+
+const params = new URLSearchParams(window.location.search);
+const filmId = params.get("film");
+
+if(movies[filmId]){
+    const movie = movies[filmId];
+
+    document.getElementById("movieTitle").innerText = movie.title;
+    document.getElementById("movieDirector").innerText = movie.director;
+    document.getElementById("movieActors").innerText = movie.actors;
+    document.getElementById("movieDescription").innerText = movie.description;
+    document.getElementById("movieVideo").src = movie.video;
+}
+</script>
+
+</body>
+</html>
