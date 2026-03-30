@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filip ZS kategóriás filmmúzeum</title>
+    <title>ZS kategóriás filmmúzeum</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="kepek/icon.png">
 </head>
 <body>
 <header id="header">
@@ -20,8 +21,8 @@
 </header>
 
 <main>
-    <h1>Üdvözlünk!</h1>
-    <h2>Válassz filmet 👇</h2>
+    <h1>Üdvözlünk ZS kategóriás filmmúzeumában!</h1>
+        <h2>Válaszd ki a "LEGJOBBAN" kívánt filmet!👇</h2>
 
     <div class="movie-grid" id="movie">
 
@@ -96,6 +97,15 @@
             <h3>Transformers 5: Az Utolsó Lovag</h3>
         </div>
 
+        <div class="movie-block" onclick="goToMovie('transformersROTB')">
+            <img src="kepek/transformersROTB.webp">
+            <div class="movie-info">
+                <p>Akció/Sci-fi • 2023</p>
+                <button>▶ Lejátszás</button>
+            </div>
+            <h3>Transformers: Rise Of The Beasts</h3>
+        </div>
+
         <div class="movie-block" onclick="goToMovie('tronares')">
             <img src="kepek/tronares.webp">
             <div class="movie-info">
@@ -103,6 +113,15 @@
                 <button>▶ Lejátszás</button>
             </div>
             <h3>Tron: Ares</h3>
+        </div>
+
+        <div class="movie-block" onclick="goToMovie('godzillakingofthemonsters')">
+            <img src="kepek/godzillakingofthemonsters.webp">
+            <div class="movie-info">
+                <p>Akció/Sci-fi • 2019</p>
+                <button>▶ Lejátszás</button>
+            </div>
+            <h3>Godzilla: King of the Monsters</h3>
         </div>
 
         <div class="movie-block" onclick="goToMovie('sharknado')">
@@ -129,7 +148,7 @@
                 <p>Gyerek/Akció • 2009</p>
                 <button>▶ Lejátszás</button>
             </div>
-            <h3>Lego Bionicle Legend Reborn</h3>
+            <h3>Lego Bionicle: Legend Reborn</h3>
         </div>
 
         <div class="movie-block" onclick="goToMovie('hearteyes')">
