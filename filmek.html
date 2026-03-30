@@ -8,13 +8,14 @@
 </head>
 <body>
 
-<header>
+<header id="header">
     <div class="header-container">
         <a href="index.html"><h1>ZS Kategóriás filmmúzeum</h1></a>
         <nav>
             <a href="index.html">Főoldal</a>
-            <a href="#movie">Filmek</a>
+            <a href="index.html">Filmek</a>
             <a href="#about">Rólunk</a>
+            <a href="#infos">Elérhetőségünk</a>
         </nav>
     </div>
 </header>
@@ -59,6 +60,7 @@ const movies = {
         description: "Új generáció harcol a Kaijuk ellen.",
         video: "//videa.hu/player?v=AKkfubCnN3fzP9H8" 
     }
+
 };
 
 const params = new URLSearchParams(window.location.search);
@@ -73,6 +75,33 @@ if(movies[filmId]){
     document.getElementById("movieDescription").innerText = movie.description;
     document.getElementById("movieVideo").src = movie.video;
 }
+function goToMovie(id){
+        window.location.href = "filmek.html?film=" + id;
+    }
+    
+    const kepek = [
+      "kepek/header1.webp",
+      "kepek/header2.webp",
+      "kepek/header3.webp",
+      "kepek/header4.webp"
+    ];
+    
+    // előző kép index lekérése
+    let elozo = localStorage.getItem("elozoKep");
+    let random;
+    
+    // addig sorsol, amíg nem ugyanaz
+    do {
+      random = Math.floor(Math.random() * kepek.length);
+    } while (random == elozo);
+    
+    // új érték mentése
+    localStorage.setItem("elozoKep", random);
+    
+    // háttér beállítása gradienttel
+    document.getElementById("header").style.backgroundImage =
+      `linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('${kepek[random]}')`;
+    </script>;
 </script>
 
 </body>
