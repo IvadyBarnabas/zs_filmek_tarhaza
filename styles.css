@@ -148,3 +148,23 @@ footer{
     color: #ffae00;
     border-top: 2px solid #ff3c00;
 }
+.us{
+    text-align: center;
+    padding: 20px;
+    background: #1e1e1e;
+    color: #ffae00;
+    border: 2px solid #ff3c00;
+    border-radius: 10px;
+    max-width: 950px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+    .header-container h1 {
+        font-size: 2rem;
+    }
+    nav a {
+        font-size: medium;
+        margin-left: 10px;
+    }
+}
